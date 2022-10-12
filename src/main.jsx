@@ -4,7 +4,7 @@ import App from './App'
 import { Inspector } from './Inspector'
 import './index.css'
 
-const el = <div>Hello, world!</div>
+const el = <div><span>Hello</span>, <span>world!</span></div>
 // { type: 'div', key: null, ref: null, props: { children: 'Hello, world!' } }
 
 const app = <App color='red'>{el}</App>
@@ -14,6 +14,8 @@ const root = <React.StrictMode>
   <App color='lightsalmon'>{el}</App>
 </React.StrictMode>
 // { type: Symbol("react.strict_mode"), key: null, ref: null, props: { children: app } }
+
+console.log(root)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   root
